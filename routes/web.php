@@ -5,7 +5,8 @@ use App\Models\Course;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    $topCourses = Course::orderByRaw('RAND()')->take(3)->get();
+    return view('welcome', compact('topCourses'));
 });
 
 Route::get('/dashboard', function () {

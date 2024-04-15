@@ -1,5 +1,5 @@
 <x-default-layout>
-    <x-header />
+    <x-header/>
     <section class="relative py-20">
         <img class="hidden lg:block absolute top-0 left-0 mt-20" src="zeus-assets/icons/dots/blue-dot-left-bars.svg"
              alt="">
@@ -14,39 +14,24 @@
             <div class="flex flex-wrap -mx-4 -mb-16">
 
 
-                <div class="w-full lg:w-1/3 px-4 mb-16">
-                    <div class="flex h-96 mb-10">
-                        <img class="w-full h-full object-cover rounded-xl"
-                             src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=967&amp;q=80"
-                             alt="">
-                    </div>
-                    <span class="inline-block mb-4 text-xs text-gray-500">10 jun 2020 19:40</span>
-                    <h2 class="mb-2 text-3xl font-semibold font-heading">Gaming 101</h2>
+                @foreach($topCourses as $course)
 
-                    <a class="text-lg font-medium text-red-500 underline hover:no-underline" href="#">Enroll</a>
-                </div>
-                <div class="w-full lg:w-1/3 px-4 mb-16">
-                    <div class="flex h-96 mb-10">
-                        <img class="w-full h-full object-cover rounded-xl"
-                             src="https://images.unsplash.com/photo-1557804506-d8017c1e4856?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1001&amp;q=80"
-                             alt="">
-                    </div>
-                    <span class="inline-block mb-4 text-xs text-gray-500">10 jun 2020 19:40</span>
-                    <h2 class="mb-4 text-3xl font-semibold font-heading">Game 202</h2>
+                    <div class="w-full lg:w-1/3 px-4 mb-16">
+                        <div class="flex h-80 mb-5">
+                            <img class="w-full h-full object-cover rounded-xl"
+                                 src="{{Storage::url($course['image'])}}"
+                                 alt="{{$course['name']}}">
+                        </div>
+                        <span class="inline-block mb-2 text-xs text-gray-500">{{$course['created_at']}}</span>
+                        <h2 class="mb-1 text-xl font-semibold font-heading w-full flex items-center">{{$course['name']}}
+                            <span class="ml-auto text-sm font-normal">$ {{number_format($course['price'])}}</span></h2>
 
-                    <a class="text-lg font-medium text-red-500 underline hover:no-underline" href="#">Enroll</a>
-                </div>
-                <div class="w-full lg:w-1/3 px-4 mb-16">
-                    <div class="flex h-96 mb-10">
-                        <img class="w-full h-full object-cover rounded-xl"
-                             src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
-                             alt="">
+                        <a class="text-md font-medium text-red-500 underline hover:no-underline"
+                           href="{{route('course', $course)}}">Enroll</a>
                     </div>
-                    <span class="text-xs font-semibold text-gray-500">10 jun 2020 19:40</span>
-                    <h2 class="mb-4 text-3xl font-semibold font-heading">Game 303</h2>
 
-                    <a class="text-lg font-medium text-red-500 underline hover:no-underline" href="#">Enroll</a>
-                </div>
+                @endforeach
+
             </div>
         </div>
     </section>
