@@ -1,47 +1,38 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+<x-default-layout>
+    <section class="relative py-20">
+        <img class="hidden lg:block absolute top-0 left-0 mt-16 z-10" src="zeus-assets/icons/dots/blue-dot-left-bars.svg" alt="">
+        <img class="hidden lg:block absolute bottom-0 right-0 mb-16" src="zeus-assets/icons/dots/yellow-dot-right-shield.svg" alt="">
+        <div class="absolute top-0 left-0 lg:bottom-0 h-128 lg:h-auto w-full lg:w-8/12 bg-gray-50"></div>
+        <div class="relative container px-4 mx-auto">
+            <div class="flex flex-wrap items-center -mx-4">
+                <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+                    <div class="max-w-lg">
+                        <h2 class="mb-10 text-4xl font-semibold font-heading">Unleash Your Inner Game Designer</h2>
+                        <p class="text-xl text-gray-500">Explore the world of game design with Gda Service: unleash your creativity and turn your ideas into immersive experiences on our innovative online platform.</p>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 px-4">
+                    <div class="lg:max-w-md p-6 lg:px-10 lg:py-12 bg-white text-center border rounded-xl">
+                        <form action="{{route('login')}}" method="POST">
+                            @csrf
+                            <span class="inline-block mb-4 text-xs text-blue-400 font-semibold">Sign In</span>
+                            <h3 class="mb-12 text-3xl font-semibold font-heading">Log in to your account</h3>
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+                            <div class="relative flex flex-wrap mb-6">
+                                <input class="relative mb-2 md:mb-0 w-full py-4 pl-4 text-sm border rounded" type="email" placeholder="e.g hello@shuffle.dev" name="email" ">
+                                <span class="absolute top-0 left-0 ml-4 -mt-2 px-1 inline-block bg-white text-gray-500 text-xs">Your email address</span>
+                            </div>
+                            <div class="relative flex flex-wrap mb-6">
+                                <input class="relative mb-2 md:mb-0 w-full py-4 pl-4 text-sm border rounded" type="password" placeholder="******" name="password">
+                                <span class="absolute top-0 left-0 ml-4 -mt-2 px-1 inline-block bg-white text-gray-500 text-xs">Password</span>
+                            </div>
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+
+                            <button class="w-full inline-block py-4 text-sm text-white font-medium leading-normal bg-red-400 hover:bg-red-300 rounded transition duration-200">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+    </section>
+</x-default-layout>

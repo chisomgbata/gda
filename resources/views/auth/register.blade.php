@@ -1,52 +1,44 @@
-<x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
+<x-default-layout>
+    <section class="relative py-20">
+        <img class="hidden lg:block absolute top-0 left-0 mt-16 z-10" src="zeus-assets/icons/dots/blue-dot-left-bars.svg" alt="">
+        <img class="hidden lg:block absolute bottom-0 right-0 mb-16" src="zeus-assets/icons/dots/yellow-dot-right-shield.svg" alt="">
+        <div class="absolute top-0 left-0 lg:bottom-0 h-128 lg:h-auto w-full lg:w-8/12 bg-gray-50"></div>
+        <div class="relative container px-4 mx-auto">
+            <div class="flex flex-wrap items-center -mx-4">
+                <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+                    <div class="max-w-lg">
+                        <h2 class="mb-10 text-4xl font-semibold font-heading">Unleash Your Inner Game Designer</h2>
+                        <p class="text-xl text-gray-500">Explore the world of game design with Gda Service: unleash your creativity and turn your ideas into immersive experiences on our innovative online platform.</p>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 px-4">
+                    <div class="lg:max-w-md p-6 lg:px-10 lg:py-12 bg-white text-center border rounded-xl">
+                        <form action="{{route('register')}}" method="POST">
+                            @csrf
+                            <span class="inline-block mb-4 text-xs text-blue-400 font-semibold">Sign Up</span>
+                            <h3 class="mb-12 text-3xl font-semibold font-heading">Create new account</h3>
+                            <div class="relative flex flex-wrap mb-6">
+                                <input class="relative mb-2 md:mb-0 w-full py-4 pl-4 text-sm border rounded" type="text" placeholder="John doe" name="name">
+                                <span class="absolute top-0 left-0 ml-4 -mt-2 px-1 inline-block bg-white text-gray-500 text-xs">Your Name</span>
+                            </div>
+                            <div class="relative flex flex-wrap mb-6">
+                                <input class="relative mb-2 md:mb-0 w-full py-4 pl-4 text-sm border rounded" type="email" placeholder="e.g hello@shuffle.dev" name="email">
+                                <span class="absolute top-0 left-0 ml-4 -mt-2 px-1 inline-block bg-white text-gray-500 text-xs">Your email address</span>
+                            </div>
+                            <div class="relative flex flex-wrap mb-6">
+                                <input class="relative mb-2 md:mb-0 w-full py-4 pl-4 text-sm border rounded" type="password" placeholder="******" name="password">
+                                <span class="absolute top-0 left-0 ml-4 -mt-2 px-1 inline-block bg-white text-gray-500 text-xs">Password</span>
+                            </div>
+                            <div class="relative flex flex-wrap mb-6">
+                                <input class="relative mb-2 md:mb-0 w-full py-4 pl-4 text-sm border rounded" type="password" placeholder="******" name="password_confirmation">
+                                <span class="absolute top-0 left-0 ml-4 -mt-2 px-1 inline-block bg-white text-gray-500 text-xs">Repeat password</span>
+                            </div>
 
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                            <button class="w-full inline-block py-4 text-sm text-white font-medium leading-normal bg-red-400 hover:bg-red-300 rounded transition duration-200">Get Started</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-
-            <x-primary-button class="ms-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+    </section>
+</x-default-layout>

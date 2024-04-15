@@ -9,8 +9,7 @@ class Nav extends Component
     /**
      * @var string[]
      */
-    public array $navs = ['about','login', 'courses'];
-
+    public array $navs = ['about', 'courses'];
 
 
     public function render()
