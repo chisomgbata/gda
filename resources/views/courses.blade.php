@@ -18,7 +18,7 @@
                     <div class="w-full lg:w-1/3 px-4 mb-16">
                         <div class="flex h-80 mb-5">
                             <img class="w-full h-full object-cover rounded-xl"
-                                 src="{{$course['image']}}"
+                                 src="{{Storage::url($course['image'])}}"
                                  alt="{{$course['name']}}">
                         </div>
                         <span class="inline-block mb-2 text-xs text-gray-500">{{$course['created_at']}}</span>

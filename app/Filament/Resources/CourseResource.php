@@ -24,7 +24,7 @@ class CourseResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('description')
+                Forms\Components\RichEditor::make('description')
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('price')
@@ -33,8 +33,10 @@ class CourseResource extends Resource
                     ->prefix('$'),
                 Forms\Components\FileUpload::make('image')
                     ->image()
+                    ->disk('public')
+                    ->directory('courses')
                     ->required(),
-                Forms\Components\FileUpload::make('files')->multiple(),
+                Forms\Components\FileUpload::make('files')->multiple()->reorderable()->appendFiles(),
             ]);
     }
 

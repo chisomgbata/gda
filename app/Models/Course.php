@@ -15,5 +15,13 @@ class Course extends Model
         'description',
         'price',
         'image',
+        'files'
     ];
+
+    protected function casts(): array
+    {
+        return [
+            'files' => 'array'
+        ];
+    }
 }
