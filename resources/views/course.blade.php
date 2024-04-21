@@ -9,6 +9,16 @@
                      src="{{asset(Storage::url($course['image']))}}"
                      alt="{{$course['name']}}">
 
+                @if($course->canView)
+                    <div class="hidden lg:block"><a
+                            class="inline-block py-3 px-8 text-sm leading-normal font-medium bg-red-50 hover:bg-red-100 text-red-500 rounded transition duration-200"
+                            href="{{route('register')}}">View Course</a></div>
+                @else
+                    <div class="hidden lg:block"><a
+                            class="inline-block py-3 px-8 text-sm leading-normal font-medium bg-red-50 hover:bg-red-100 text-red-500 rounded transition duration-200"
+                            href="{{route('register')}}">Get Course</a></div>
+                @endif
+
 
             </div>
 

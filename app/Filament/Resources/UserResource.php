@@ -28,10 +28,7 @@ class UserResource extends Resource
                     ->email()
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('password')
-                    ->password()
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\Select::make('courses')->relationship('courses', 'name')->multiple(),
             ]);
     }
 
@@ -43,6 +40,10 @@ class UserResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('email')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('courses.name')
+                    ->label('Courses')
+                    ->badge()
+                ,
 
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

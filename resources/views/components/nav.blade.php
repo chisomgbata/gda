@@ -32,6 +32,15 @@
     @endguest
 
     @auth()
+
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button type="submit"
+                    class="inline-block py-3 px-8 text-sm leading-normal font-medium   text-red-500 rounded transition duration-200">
+                {{ __('Log out') }}
+            </button>
+
+        </form>
         <div class="hidden lg:block"><a
                 class="inline-block py-3 px-8 text-sm leading-normal font-medium bg-red-50 hover:bg-red-100 text-red-500 rounded transition duration-200"
                 href="{{route('profile.edit')}}">Profile</a></div>
@@ -47,7 +56,8 @@
                     <img class="h-7" src="{{asset('/zeus-assets/logo/logo-zeus-red.svg')}}" alt="" width="auto"></a>
                 <button class="navbar-close">
                     <svg class="h-6 w-6 text-gray-500 cursor-pointer hover:text-gray-500"
-                         xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                         xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24"
+                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                               d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
@@ -56,12 +66,14 @@
             <div>
                 <ul>
                     @foreach($navs as $nav)
-                        <li class="mb-1"><a class="block p-4 text-sm font-medium text-gray-900 hover:bg-gray-50 rounded"
-                                            href="{{route($nav)}}">{{$nav}}</a></li>
+                        <li class="mb-1"><a
+                                class="block p-4 text-sm font-medium text-gray-900 hover:bg-gray-50 rounded"
+                                href="{{route($nav)}}">{{$nav}}</a></li>
                     @endforeach
                     @guest()
-                        <li class="mb-1"><a class="block p-4 text-sm font-medium text-gray-900 hover:bg-gray-50 rounded"
-                                            href="{{route('login')}}">login</a></li>
+                        <li class="mb-1"><a
+                                class="block p-4 text-sm font-medium text-gray-900 hover:bg-gray-50 rounded"
+                                href="{{route('login')}}">login</a></li>
 
                     @endguest
 
