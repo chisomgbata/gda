@@ -42,7 +42,7 @@
                                     <video
                                         controls
                                         src="{{Storage::url($file)}}"
-                                        class="object-cover  w-full h-full"/>
+                                        class="object-cover  "/>
                                     {{--                                <button type="button" class="absolute inset-0 focus:outline-none">--}}
                                     {{--                                    <span class="sr-only">View details for IMG_4985.HEIC</span>--}}
                                     {{--                                </button>--}}
