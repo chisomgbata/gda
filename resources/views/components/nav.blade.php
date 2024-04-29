@@ -33,7 +33,7 @@
 
     @auth()
 
-        <form method="POST" action="{{ route('logout') }}">
+        <form method="POST" action="{{ route('logout') }}" class="hidden lg:block">
             @csrf
             <button type="submit"
                     class="inline-block py-3 px-8 text-sm leading-normal font-medium   text-red-500 rounded transition duration-200">
@@ -88,6 +88,17 @@
                 @endguest
 
                 @auth()
+
+                    <form method="POST" action="{{ route('logout') }}" class="">
+                        @csrf
+                        <button type="submit"
+                                class="inline-block py-3 px-8 text-sm leading-normal font-medium   text-red-500 rounded transition duration-200">
+                            {{ __('Log out') }}
+                        </button>
+
+                    </form>
+
+
                     <div class="pt-6"><a
                             class="block py-3 text-center text-sm leading-normal bg-red-50 hover:bg-red-100 text-red-300 font-semibold rounded transition duration-200"
                             href="{{route('profile.edit')}}">Profile</a></div>

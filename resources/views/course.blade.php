@@ -39,9 +39,11 @@
                                 <div
                                     class="ring-2 ring-offset-2 ring-indigo-500 group block w-full aspect-video  rounded-lg bg-gray-100 overflow-hidden">
                                     <!-- Current: "", Default: "group-hover:opacity-75" -->
+                                    {{Storage::mimeType($file)}}
                                     <video
                                         controls
                                         src="{{Storage::url($file)}}"
+                                        type="{{Storage::mimeType($file)}}"
                                         class="object-cover  "/>
                                     {{--                                <button type="button" class="absolute inset-0 focus:outline-none">--}}
                                     {{--                                    <span class="sr-only">View details for IMG_4985.HEIC</span>--}}
