@@ -2,14 +2,13 @@
     <div class="container px-4 mx-auto pt-12">
         <div class="flex flex-wrap justify-center lg:justify-start items-center -mx-4">
             <div class="w-full px-4 mb-6 md:mb-0 md:w-1/2">
-                <span class="font-semibold text-xs text-blue-400">Be a game developer</span>
                 <h2 class="mt-8 mb-6 lg:mb-12 text-4xl lg:text-5xl font-semibold">Learn from Industry Experts</h2>
                 <div class="max-w-lg mb-6 lg:mb-12">
                     <p class="text-xl text-gray-500">Start your game development journey today with GDA</p>
                 </div>
                 <div class="flex flex-wrap">
                     <a class="inline-block px-6 py-4 mb-3 mr-4 text-sm font-medium leading-normal bg-red-400 hover:bg-red-300 text-white rounded transition duration-200"
-                       href="#">View All Courses</a>
+                       href="{{route('courses')}}">View All Courses</a>
                 </div>
             </div>
             <div class="relative w-full md:w-1/2 px-8">

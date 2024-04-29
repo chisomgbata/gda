@@ -36,46 +36,46 @@
         </div>
     </section>
 
-    <section class="py-20">
-        <div class="container px-4 mx-auto">
-            <div class="flex flex-wrap items-center -mx-4">
-                <div class="w-full lg:w-1/2 px-4 mb-12 md:mb-16 lg:mb-0">
-                    <div class="max-w-md">
+    {{--    <section class="py-20">--}}
+    {{--        <div class="container px-4 mx-auto">--}}
+    {{--            <div class="flex flex-wrap items-center -mx-4">--}}
+    {{--                <div class="w-full lg:w-1/2 px-4 mb-12 md:mb-16 lg:mb-0">--}}
+    {{--                    <div class="max-w-md">--}}
 
-                        <h2 class="mt-8 mb-10 text-4xl font-semibold font-heading">Industry Partners</h2>
-                        <p class="text-xl text-gray-500">Unlock Your Inner Game Designer: Discover the Power of Gda
-                            Service for Online Game Development Education!</p>
-                    </div>
-                </div>
-                <div class="w-full lg:w-1/2 px-4">
-                    <div class="flex flex-wrap -m-4">
+    {{--                        <h2 class="mt-8 mb-10 text-4xl font-semibold font-heading">Industry Partners</h2>--}}
+    {{--                        <p class="text-xl text-gray-500">Unlock Your Inner Game Designer: Discover the Power of Gda--}}
+    {{--                            Service for Online Game Development Education!</p>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--                <div class="w-full lg:w-1/2 px-4">--}}
+    {{--                    <div class="flex flex-wrap -m-4">--}}
 
-                        <div class="w-1/2 p-4">
-                            <div class="bg-gray-50 rounded-xl">
-                                <img class="mx-auto" src="images/cloud3.jpeg" alt="">
-                            </div>
-                        </div>
-                        <div class="w-1/2 p-4">
-                            <div class="bg-gray-50 rounded-xl overflow-clip">
-                                <img class="mx-auto" src="images/cloud4.jpeg" alt="">
-                            </div>
-                        </div>
+    {{--                        <div class="w-1/2 p-4">--}}
+    {{--                            <div class="bg-gray-50 rounded-xl">--}}
+    {{--                                <img class="mx-auto" src="images/cloud3.jpeg" alt="">--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+    {{--                        <div class="w-1/2 p-4">--}}
+    {{--                            <div class="bg-gray-50 rounded-xl overflow-clip">--}}
+    {{--                                <img class="mx-auto" src="images/cloud4.jpeg" alt="">--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
 
-                        <div class="w-1/2 p-4">
-                            <div class="bg-gray-50 rounded-xl">
-                                <img class="mx-auto" src="images/cloud2.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="w-1/2 p-4">
-                            <div class="bg-gray-50 rounded-xl">
-                                <img class="mx-auto" src="images/cloud1.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {{--                        <div class="w-1/2 p-4">--}}
+    {{--                            <div class="bg-gray-50 rounded-xl">--}}
+    {{--                                <img class="mx-auto" src="images/cloud2.jpg" alt="">--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+    {{--                        <div class="w-1/2 p-4">--}}
+    {{--                            <div class="bg-gray-50 rounded-xl">--}}
+    {{--                                <img class="mx-auto" src="images/cloud1.png" alt="">--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
+    {{--        </div>--}}
+    {{--    </section>--}}
 
     <section class="py-20">
         <div class="container px-4 mx-auto">

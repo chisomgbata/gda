@@ -14,7 +14,7 @@ class Course extends Model
     /**
      * @var bool|mixed
      */
-    public bool $canView;
+    public bool $canView = false;
     protected $fillable = [
         'name',
         'description',
