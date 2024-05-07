@@ -36,7 +36,7 @@ class CourseResource extends Resource
                     ->disk('public')
                     ->directory('courses')
                     ->required(),
-                Forms\Components\FileUpload::make('files')->multiple()->reorderable()->appendFiles(),
+                Forms\Components\FileUpload::make('files')->multiple()->reorderable()->appendFiles()->columnSpanFull(),
             ]);
     }
 

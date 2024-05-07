@@ -7,8 +7,7 @@
              src="zeus-assets/icons/dots/yellow-dot-right-shield.svg" alt="">
         <div class="container px-4 mx-auto">
             <div class="max-w-2xl mx-auto mb-20 text-center">
-                <span class="text-xs text-blue-400 font-semibold">What's new at Shuffle</span>
-                <h2 class="mt-8 mb-10 text-4xl font-semibold font-heading">Our Courses</h2>
+                <h2 class="mt-8 mb-10 text-4xl font-semibold font-heading">دوراتنا.</h2>
 
             </div>
             <div class="flex flex-wrap -mx-4 -mb-16">
@@ -24,7 +23,9 @@
                         </div>
                         <span class="inline-block mb-2 text-xs text-gray-500">{{$course['created_at']}}</span>
                         <h2 class="mb-1 text-xl font-semibold font-heading w-full flex items-center">{{$course['name']}}
-                            <span class="ml-auto text-sm font-normal">$ {{number_format($course['price'])}}</span></h2>
+                            <span
+                                class="ml-auto text-sm font-normal">ر. سSAR  {{number_format($course['price'])}}</span>
+                        </h2>
 
                         <a class="text-md font-medium text-red-500 underline hover:no-underline"
                            href="{{route('course', $course)}}">Enroll</a>
@@ -78,48 +79,57 @@
     {{--    </section>--}}
 
     <section class="py-20">
-        <div class="container px-4 mx-auto">
-            <div class="flex items-center">
+        <div class="container mx-auto grid lg:grid-cols-2 w-full gap-6 px-2">
 
-                <div class="max-w-3xl mx-auto flex flex-wrap items-center">
-                    <div class="w-full lg:w-2/5 mb-6 lg:mb-0 flex flex-wrap items-center justify-between">
-                        <div>
-                            <img class="mb-6 h-14 w-14 rounded-full object-cover object-top"
-                                 src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=334&amp;q=80"
-                                 alt="">
-                            <p class="mb-2 text-2xl font-semibold font-heading">Esther Howards</p>
-                            <p class="text-gray-500">Students</p>
-                        </div>
-                        <div class="lg:hidden pt-4">
-                            <button class="w-12 h-12 mr-2 rounded-full border hover:bg-gray-50">
-                                <svg class="mx-auto" width="24" height="24" viewbox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 12L5 12" stroke="#556B7A" stroke-width="2" stroke-linecap="round"
-                                          stroke-linejoin="round"></path>
-                                    <path d="M12 19L5 12L12 5" stroke="#556B7A" stroke-width="2" stroke-linecap="round"
-                                          stroke-linejoin="round"></path>
-                                </svg>
-                            </button>
-                            <button class="w-12 h-12 rounded-full border hover:bg-gray-50">
-                                <svg class="mx-auto" width="24" height="24" viewbox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12L19 12" stroke="#556B7A" stroke-width="2" stroke-linecap="round"
-                                          stroke-linejoin="round"></path>
-                                    <path d="M12 5L19 12L12 19" stroke="#556B7A" stroke-width="2" stroke-linecap="round"
-                                          stroke-linejoin="round"></path>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="w-full lg:w-3/5">
-                        <p class="text-xl">I have always been interested in game development, but I never knew where to
-                            start or how to learn the necessary skills. That is until I found Gda Service. This online
-                            platform has completely transformed my game development journey.The courses offered by Gda
-                            Service are comprehensive and easy to follow.</p>
-                    </div>
+
+            <div class="w-full  flex  flex-col rounded-lg shadow-lg p-6 bg-gray-50">
+                <p class="text-lg text-gray-600">بشكل عام ممتاز ، والملفت تسلسل الدروس حتى الآن والوضوح في الشرح
+                    بالتفصيل ، جهد تشكرو عليه ، بارك الله في مسعاكم ونفع بكم وبنا جميعاً</p>
+                <div class="w-full mt-2 ">
+                    <p class=" text-lg font-semibold font-heading">
+                        نوره عبدالحميد
+                    </p>
+                    <p class="text-gray-500">from SA</p>
                 </div>
-
             </div>
+
+            <div class="w-full  flex  flex-col rounded-lg shadow-2xl p-5 bg-gray-50">
+                <p class="text-lg text-gray-600">
+                    معسكر جميل واعطانا كل مايحتاجه المصمم في بلندر وزاد ايضاً من خبرتي في البرنامج
+                </p>
+                <div class="w-full mt-2 ">
+                    <p class=" text-lg font-semibold font-heading">
+                        Reem Hassan yusef
+                    </p>
+                    <p class="text-gray-500">from SA</p>
+                </div>
+            </div>
+
+            <div class="w-full  flex  flex-col rounded-lg shadow-2xl p-5 bg-gray-50">
+                <p class="text-lg text-gray-600">
+                    رائع جدا شكرا لكم على مجهودكم الآن عندي هواية أضافية اقضي فيها وقت فراغي
+                </p>
+                <div class="w-full mt-2 ">
+                    <p class=" text-lg font-semibold font-heading">
+                        Sultan bashammakh
+                    </p>
+                    <p class="text-gray-500">from SA</p>
+                </div>
+            </div>
+
+            <div class="w-full  flex  flex-col rounded-lg shadow-2xl p-5 bg-gray-50">
+                <p class="text-lg text-gray-600">
+                    المعسكر جدا مفيد وشامل لكل شيء عن البرنامج اشكر كل القائمين عليه
+                </p>
+                <div class="w-full mt-2 ">
+                    <p class=" text-lg font-semibold font-heading">
+                        فايزه عبدالله جراح
+                    </p>
+                    <p class="text-gray-500">from SA</p>
+                </div>
+            </div>
+
+
         </div>
     </section>
 </x-default-layout>

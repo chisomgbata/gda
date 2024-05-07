@@ -1,6 +1,6 @@
 <nav {{ $attributes->class(['flex justify-between items-center py-8 px-4 xl:px-10 container mx-auto']) }}><a
         class="text-lg font-semibold" href="/">
-        <img class="h-12" src="{{asset('/images/gda.jpeg')}}" alt="" width="auto"></a>
+        <img class="h-12" src="{{asset('/images/gda.webp')}}" alt="" width="auto"></a>
     <div class="lg:hidden">
         <button class="navbar-burger flex items-center p-3 hover:bg-gray-50 rounded">
             <svg class="block h-4 w-4" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Mobile
