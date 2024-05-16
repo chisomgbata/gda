@@ -29,9 +29,9 @@ class CourseResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('description')
+                Forms\Components\RichEditor::make('description')
                     ->required()
-                    ->columnSpanFull(),
+                    ->columnSpanFull()->disableToolbarButtons(['attachFiles']),
                 Forms\Components\TextInput::make('price')
                     ->required()
                     ->numeric()

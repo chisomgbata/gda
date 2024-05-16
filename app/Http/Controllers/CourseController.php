@@ -19,7 +19,7 @@ class CourseController extends Controller
 
 //        pick page index 0 when page is 1
 
-        $currentPage = $course->pages->toArray()[$page - 1];
+        $currentPage = $course->pages->toArray()[$page - 1] ?? null;
 
         return view('show', compact([
             'currentPage', 'course'
