@@ -22,7 +22,7 @@ class PagesRelationManager extends RelationManager
                 Forms\Components\RichEditor::make('content')->columnSpanFull()->disableToolbarButtons(['attachFiles'])
                     ->required(),
                 Forms\Components\FileUpload::make('media_url')->label('Video')
-                    ->columnSpanFull()->acceptedFileTypes(['video/mp4', 'video/avi', 'video/mov', 'video/wmv', 'video/flv', 'video/mkv', 'video/webm'])->preserveFilenames(),
+                    ->columnSpanFull()->preserveFilenames(),
                 Forms\Components\FileUpload::make('additional_files')->label('Additional Files')->multiple()->preserveFilenames()
                 ,
                 Forms\Components\FileUpload::make('images')->label('Images')->multiple()->image()->imagePreviewHeight('150px')->preserveFilenames()

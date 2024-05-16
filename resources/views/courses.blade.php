@@ -8,7 +8,7 @@
         <div class="container px-4 mx-auto">
             <div class="max-w-2xl mx-auto mb-20 text-center">
                 <span class="text-xs text-blue-400 font-semibold">checkout our courses</span>
-                <h2 class="mt-8 mb-10 text-4xl font-semibold font-heading">Our Courses</h2>
+                <h2 class="mt-8 mb-10 text-4xl font-semibold font-heading">دوراتنا</h2>
 
             </div>
             <div class="flex flex-wrap -mx-4 -mb-16">

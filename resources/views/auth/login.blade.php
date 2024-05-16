@@ -9,8 +9,7 @@
             <div class="flex flex-wrap items-center -mx-4">
                 <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
                     <div class="max-w-lg">
-                        <h2 class="mb-10 text-4xl font-semibold font-heading">انشاء حساب جديد في منصة سكيب
-                            التعليمية</h2>
+                        <h2 class="mb-10 text-4xl font-semibold font-heading">تسجيل الدخول في منصة سكيب التعليمية</h2>
                         <p class="text-xl text-gray-500">Explore the world of game design with Gda Service: unleash your
                             creativity and turn your ideas into immersive experiences on our innovative online
                             platform.</p>
@@ -21,11 +20,14 @@
                         <form action="{{route('login')}}" method="POST">
                             @csrf
                             <span class="inline-block mb-4 text-xs text-blue-400 font-semibold">Sign In</span>
-                            <h3 class="mb-12 text-3xl font-semibold font-heading">Log in to your account</h3>
+                            <h3 class="mb-12 text-3xl font-semibold font-heading">
+                                تسجيل الدخول
+
+                            </h3>
 
                             <div class="relative flex flex-wrap mb-6">
                                 <input class="relative mb-2 md:mb-0 w-full py-4 pl-4 text-sm border rounded"
-                                       type="email" placeholder="e.g hello@shuffle.dev" name="email" ">
+                                       type="email" placeholder="e.g hello@shuffle.dev" name="email">
                                 <span
                                     class="absolute top-0 left-0 ml-4 -mt-2 px-1 inline-block bg-white text-gray-500 text-xs">Your email address</span>
                             </div>

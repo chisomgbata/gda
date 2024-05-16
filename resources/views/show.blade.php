@@ -104,7 +104,7 @@
         </div>
     @else
         <div>
-            This Course currently has no topics
+            <p>This Course currently has no topics</p>
             <a href="/courses">
                 Go Back
             </a>
