@@ -13,6 +13,8 @@
                     <div class="hidden lg:block"><a
                             class="inline-block py-3 px-8 text-sm leading-normal font-medium bg-red-50 hover:bg-red-100 text-red-500 rounded transition duration-200"
                             href="{{route('register')}}">Get Course</a></div>
+                @else
+
                 @endif
 
 
@@ -26,54 +28,11 @@
 
             @if($course->canView)
 
-                <h2 class=" font-bold text-gray-800 text-2xl mt-5">Course Files</h2>
-
-                <section class="mt-8 pb-16" aria-labelledby="gallery-heading">
-                    <h2 id="gallery-heading" class="sr-only">Recently viewed</h2>
-                    <ul role="list"
-                        class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 sm:gap-x-6 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-2 xl:gap-x-8">
-                        @foreach($course->files as $file)
-
-                            @php
-                                $fileType = Str::afterLast($file, '.');
-
-
-                            @endphp
-
-                            <li class="relative">
-                                <!-- Current: "ring-2 ring-offset-2 ring-indigo-500", Default: "focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500" -->
-                                <div
-                                    class="ring-2 ring-offset-2 ring-indigo-500 group block w-full aspect-video  rounded-lg bg-gray-100 overflow-hidden">
-                                    <!-- Current: "", Default: "group-hover:opacity-75" -->
-
-                                    {{--                                    check if type is an image--}}
-                                    @if($fileType == 'jpg' || $fileType == 'jpeg' || $fileType == 'png' || $fileType == 'gif' || $fileType == 'svg')
-                                        <a href="
-                                        {{Storage::url($file)}}"
-                                           class="absolute inset-0 focus:outline-none">
-                                            <span class="sr-only">View details for {{$file}}</span>
-                                        </a>
-                                        <img
-                                            src="{{Storage::url($file)}}"
-                                            alt=""
-                                            class="object-cover  "/>
-                                    @elseif($fileType == 'mp4' || $fileType == 'mov' || $fileType == 'avi' || $fileType == 'mkv' || $fileType == 'webm')
-                                        <video
-                                            controls
-                                            src="{{Storage::url($file)}}"
-                                            type="{{Storage::mimeType($file)}}"
-                                            class="object-cover  "/>
-                                    @endif
-
-
-                                </div>
-
-                            </li>
-
-                        @endforeach
-
-                    </ul>
-                </section>
+                <a href="{{route('showCourse', [$course])}}"
+                   class="inline-block py-3 px-8 text-sm leading-normal font-medium bg-red-50 hover:bg-red-100 text-red-500 rounded transition duration-200 mt-8"
+                >
+                    View Course
+                </a>
 
             @else
 

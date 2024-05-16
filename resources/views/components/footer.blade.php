@@ -4,7 +4,7 @@
             <div class="flex flex-wrap items-start justify-between">
                 <div class="w-full lg:w-1/5 mb-6 lg:mb-0">
                     <a class="inline-block mb-5 text-gray-900 text-lg font-semibold" href="#"><img
-                                src="images/gda.jpeg" alt="" width="100"></a>
+                            src="images/gda.webp" alt="" width="100"></a>
                 </div>
                 <div class="w-full lg:w-auto">
                     <ul class="flex flex-wrap space-x-4 lg:space-x-8 items-center text-sm">

@@ -37,6 +37,9 @@ class User extends Authenticatable implements FilamentUser
 
     public function canAccessPanel(Panel $panel): bool
     {
+        if (env('APP_ENV') === 'local') {
+            return true;
+        }
         $admins = collect(['admin@gda.services']);
         return $admins->contains($this->email);
     }

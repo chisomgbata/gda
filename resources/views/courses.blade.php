@@ -23,7 +23,8 @@
                         </div>
                         <span class="inline-block mb-2 text-xs text-gray-500">{{$course['created_at']}}</span>
                         <h2 class="mb-1 text-xl font-semibold font-heading w-full flex items-center">{{$course['name']}}
-                            <span class="ml-auto text-sm font-normal">$ {{number_format($course['price'])}}</span></h2>
+                            <span class="ml-auto text-sm font-normal">ر.س {{number_format($course['price'])}}</span>
+                        </h2>
 
                         <a class="text-md font-medium text-red-500 underline hover:no-underline"
                            href="{{route('course', $course)}}">Enroll</a>
