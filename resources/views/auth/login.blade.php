@@ -10,9 +10,7 @@
                 <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
                     <div class="max-w-lg">
                         <h2 class="mb-10 text-4xl font-semibold font-heading">تسجيل الدخول في منصة سكيب التعليمية</h2>
-                        <p class="text-xl text-gray-500">Explore the world of game design with Gda Service: unleash your
-                            creativity and turn your ideas into immersive experiences on our innovative online
-                            platform.</p>
+
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 px-4">
